@@ -285,7 +285,7 @@ justify-content: center;
 color: #fff;
 font-family: ‘Helvetica Neue’, Arial, sans-serif;
 font-weight: 800;
-font-size: clamp(10px, 1.2vw, 13px);
+font-size: clamp(20px, 2.4vw, 26px);
 text-align: center;
 border: 1.5px solid #000;
 box-shadow: 0 2px 4px rgba(0,0,0,0.4);
@@ -1667,7 +1667,7 @@ function render() {
   // Wrap rect AFTER transforms — its width is the post-transform screen-x extent,
   // which equals FIELD_H × scale (sideline-to-sideline). Use that to derive scale.
   const scale = wrapRect.width / FIELD_H;
-  const tokenScreenSize = 28; // ~28 px on screen — adjust if needed
+  const tokenScreenSize = 46; // ~46 px on screen to fit larger labels
   // pre-rotation height (will become screen-y after stretch and rotate):
   const Hpx = tokenScreenSize / STRETCH_X_render;
   // pre-rotation width (will become screen-x after rotate):
