@@ -63,17 +63,18 @@ text-transform: uppercase;
 background: var(–panel-2);
 border: 1px solid var(–border);
 color: var(–text);
-height: 36px;
-padding: 0 12px;
+height: 44px;
+min-width: 140px;
+padding: 0 14px;
 border-radius: 6px;
 cursor: pointer;
 font-family: inherit;
-font-weight: 700;
-font-size: 11px;
-letter-spacing: 0.1em;
+font-weight: 800;
+font-size: 14px;
+letter-spacing: 0.08em;
 text-transform: uppercase;
 -webkit-tap-highlight-color: transparent;
-display: flex; align-items: center; gap: 6px;
+display: flex; align-items: center; justify-content: center; gap: 6px;
 }
 .top-btn:active { background: var(–accent); color: #000; }
 .flip-menu-wrap {
@@ -114,12 +115,13 @@ cursor: pointer;
 background: var(–panel-2);
 border: 1px solid var(–border);
 color: var(–text);
-height: 36px;
-padding: 0 10px;
+height: 44px;
+min-width: 140px;
+padding: 0 12px;
 border-radius: 6px;
 font-family: inherit;
-font-weight: 700;
-font-size: 12px;
+font-weight: 800;
+font-size: 14px;
 letter-spacing: 0.05em;
 cursor: pointer;
 -webkit-appearance: none;
@@ -129,8 +131,8 @@ linear-gradient(135deg, var(–text-dim) 50%, transparent 50%);
 background-position: calc(100% - 14px) center, calc(100% - 9px) center;
 background-size: 5px 5px, 5px 5px;
 background-repeat: no-repeat;
-padding-right: 26px;
-max-width: 180px;
+padding-right: 28px;
+max-width: 220px;
 }
 .top-select:focus { outline: none; border-color: var(–accent); }
 
@@ -140,22 +142,25 @@ background: var(–panel-2);
 border-radius: 6px;
 padding: 3px;
 border: 1px solid var(–border);
+height: 44px;
 }
 .side-toggle button {
 background: transparent;
-color: var(–text-dim);
+color: var(–text);
 border: none;
-padding: 6px 14px;
+min-width: 90px;
+padding: 0 14px;
 font-family: inherit;
-font-weight: 700;
-font-size: 11px;
-letter-spacing: 0.1em;
+font-weight: 800;
+font-size: 14px;
+letter-spacing: 0.08em;
 text-transform: uppercase;
 cursor: pointer;
 border-radius: 4px;
 }
-.side-toggle button.active.offense { background: var(–offense); color: #000; }
-.side-toggle button.active.defense { background: var(–defense); color: #000; }
+.side-toggle button:not(.active) { opacity: 0.55; }
+.side-toggle button.active.offense { background: var(–offense); color: #000; opacity: 1; }
+.side-toggle button.active.defense { background: var(–defense); color: #000; opacity: 1; }
 
 .main {
 height: calc(100vh - 56px);
@@ -973,8 +978,9 @@ cursor: pointer;
 @media (max-width: 700px) {
 .topbar { padding: 0 8px; gap: 6px; }
 .logo { font-size: 14px; }
-.top-btn { padding: 0 8px; font-size: 10px; }
-.side-toggle button { padding: 5px 8px; font-size: 10px; }
+.top-btn { padding: 0 10px; font-size: 12px; min-width: 100px; }
+.top-select { font-size: 12px; min-width: 100px; padding-right: 26px; }
+.side-toggle button { padding: 0 10px; font-size: 12px; min-width: 70px; }
 .inspector { width: calc(100% - 32px); right: 16px; left: 16px; top: auto; bottom: 90px; }
 .bottom-bar { bottom: 16px; padding: 6px; }
 .bottom-bar button { padding: 8px 10px; font-size: 10px; }
